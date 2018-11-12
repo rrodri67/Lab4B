@@ -65,7 +65,7 @@ def print_anagrams(dict, count, word, prefix=""):
             if cur not in before:
                 print_anagrams(dict, count, before + after, prefix + cur)
 
-def read_from_file(file_name, dict):
+def read_file(file_name, dict):
         most_anagrams = []
         with open(file_name, 'r') as file:
             for line in file:
@@ -84,6 +84,6 @@ def main():
         file_name = ("list.txt")
         hashTable = hash_list(words)
         print("The average number of strings in the hash table is: " + hashTable.average_number_strings())
-        read_from_file(file_name, hashTable)
+        read_file(file_name, hashTable)
 
 main()    
